@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{fullpage}
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge \textsc{Bharat Giddwani}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Nimbahera, (Rajasthan), India  | 30 December 1997 \\
+    \textsc{Address:}   & Hostel H, NIT Raipur, Chhattisgarh, India \\
+    \textsc{Phone:}     & +91 8441029980 | +91 8112284172\\
+    \textsc{email:}     & \href{mailto:bharatgiddwani@gmail.com}{bharatgiddwani@gmail.com} | \href{mailto:bharatgiddwani@yahoo.in}{bharatgiddwani@yahoo.in}
+    
+\end{tabular}
+    \
+%Section : Career Objective
+\section{Career Objective}
+To pursue Research and Development opportunities in Deep Learning, Computer Vision, Deep Reinforcement Learning, Natural Language Processing, Machine Learning and Data Science.
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{Current}  & B.Tech in \textsc{Electronics and Telecommunication},\\
+ & \textbf{National Institute Of Technology}, Raipur\\
+%& 110/110 \small\emph{summa cum laude} | Major: Quantitative Finance\\
+%& Thesis: ``Sublinear and Locally Sublinear Prices'' | \small Advisor: Prof. Erio \textsc{Castagnoli}\\
+
+&\normalsize \textsc{Gpa}: 9.38/10\\\\%\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\&\\
+
+\textsc{March} 2015& \textsc{Intermediate in science } \\,& \normalsize\textbf{Kailash Vidya Vihar,(J.K.), Nimbahera}, Rajasthan\\
+%& Thesis: ``Portfolio Strategies with Target Prices'' | \small Advisor: Stefano \textsc{Bonini}\\
+&\normalsize \textsc{percentage}: 91.00\\\\%\hyperlink{grds_cleli}{\hfill| \footnotesize Detailed List of Exams}\\&\\
+
+\textsc{March} 2013& \textsc{Matriculation } \\,& \normalsize\textbf{Kailash Vidya Vihar,(J.K.), Nimbahera}, Rajasthan\\
+&\textsc{Gpa}: 7.8/10\\\\% \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\&\\
+
+%\textsc{July} 2003& \textbf{Liceo Classico ``E. Duni''}, Matera | Final Grade: 100/100
+\end{tabular}
+
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+\textsc{Study and Implementation} & \textsc{May-July,2018} \\\textsc{Of YOLOv3 Object Detection}&\emph{Guide-Prof. Rama Krishna Sai Gorthi}\\&\footnotesize{Extensive research study on CNN based Object detectors. Used Python 3 as a primary platform to design deep CNNs for object detection and localization. Implemented pre-trained YOLO with the help of open source courses in 'Keras' and 'tensorflow' as backend. Implemented pre-trained YOLOv3 (Improved YOLO model) model in 'Pytorch' library. Experimented with pre-trained object detectors like YOLO, YOLOv3 with the objective of fine tuning the network on other datasets in order to get desired bounding boxes.}\\\multicolumn{2}{c}{} \\
+\textsc{Cat and Dog Classifier} & \textsc{May-June,2018} \\&\footnotesize{Conducted a extensive literature study on Convolutional Neural Networks. Implemented in Python 3.6 on Pytorch, trained the network(Resnet) on 4000 images of Cats/Dogs with different hyperparameter sets and obtained a validation set accuracy on 1000 images of 87\%. with Transfer-Learning on a pre-trained Resnet-50 architecture on ImageNet, accuracy increased to 96\%.}\\\multicolumn{2}{c}{} \\
+\textsc{Titanic-Survival Predictions} & \textsc{Mar-2018}\\&\footnotesize{Dataset is from Kaggle's famous Titanic disaster's survival prediction competition . Data Analysis- Analyzed and obtained the relationship between features using statistical Explored Data Analysis Methods. Perform Feature Engineering and Data Cleaning by adding , removing and converting features into suitable form . Finally implemented the Radial Support vector machine Classifier with a Gaussian kernel and obtained the cross validation score of 0.81 while submission script on kaggle competition got a score of 0.78947.}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Summer} & \textsc{Research Intern at Indian Institute Of Technology, Tirupati}\\\textsc{May-July 2018}&\emph{Project Guide: Prof. Rama Krishna Sai Gorthi}\\&\footnotesize{Study and Implementation Object Detection in Natural Images using Deep Learning. Experimentation with various deep learning frameworks (Keras , PyTorch) and pre-trained models (YOLO , YOLOv2 ,YOLOv3) to obtain results on various image datasets  }\\\multicolumn{2}{c}{} \\
+ \textsc{Dec 2017 - Jan 2018} & \textsc{Industrial Training at BSNL, ALTTC Ghaziabad (Uttar Pradesh)} \\&\footnotesize{Visited various Telecommunications labs. Briefly studied about different Telecommunication topologies, and different generations of mobile communication Along with Next generation Network, Broadband, Wifi, Wi-Max, LAN, WAN, OFC etc., and Basics of IP Addressing (IPv4 and IPv6) at BSNL- ALTTC. }\\\multicolumn{2}{c}{} \\
+%\textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Certificates} 
+\begin{tabular}{rl} 
+\textsc{May.} 2018 & Deep Learning Specialization (Coursera Course Certificate) - deeplearning.ai\\
+\textsc{Feb.} 2018 & Machine Learning (Coursera Course Certificate) - Stanford University\\
+\textsc{Dec.} 2018 & Machine Learning (Short Term Training Program Participation Certificate) - NIT Raipur\\
+\textsc{Oct.} 2017 & Introduction to Python for Data Science - DataCamp certificate\\
+\end{tabular}
+
+%Section: Technical Skills
+\section{Technical Skills}
+\begin{tabular}{rl}
+\textsc{General Programming:}&C, C++, MATLAB, Python, LaTex\\
+\textsc{Simulation Tools:}&LabView, MATLAB-Simulink\\
+\textsc{Operating Systems:}&Windows and Linux\\
+\textsc{Deep Learning Frameworks:}&PyTorch, Keras, Tensorflow
+\end{tabular}
+%Section Soft skills
+\section{Soft Skills}
+\begin{tabular}{r|p{11cm}}
+\textsc{Languages}&English - Professional Fluency\\& Hindi - Fluent \\& Sindhi - Mother Tongue\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%\section{Extra Curricular Activities}
+%\begin{tabular}{r|p{11cm}}
+%\textsc{IEEE Student Branch :}\\\textsc{NIT Raipur}&\footnotesize{Study and Implementation Object Detection in Natural Images using Deep Learning. Experimentation with various deep learning frameworks (Keras , PyTorch) and pre-trained models (YOLO , YOLOv2 ,YOLOv3) to obtain results on various image datasets  }\\\multicolumn{2}{c}{} \\
+ %\textsc{Dec 2017 - Jan 2018} & \textsc{Industrial Training at BSNL, ALTTC Ghaziabad (Uttar Pradesh)} \\&\footnotesize{Visited various Telecommunications labs. Briefly studied about different Telecommunication topologies, and different generations of mobile communication Along with Next generation Network, Broadband, Wifi, Wi-Max, LAN, WAN, OFC etc., and Basics of IP Addressing (IPv4 and IPv6) at BSNL- ALTTC. }\\\multicolumn{2}{c}{} \\
+%\textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
+%\end{tabular}
+% Section intersts and activities
+\section{Interests and Activities}
+\begin{tabular}{rl} 
+Interests: &  Machine Learning, Deep Learning, Image Processing, Computer Vision, NLP, Mathematics\\
+Activities: & Reading, Animation, Chess, Badminton, Travelling
+\end{tabular}
+\end{document}
+ 

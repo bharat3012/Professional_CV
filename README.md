@@ -1,2 +1,3 @@
 # Professional_CV
-Professional level CV made in Latex of BHARAT GIDWANI
+Professional level CV made in Latex by BHARAT GIDDWANI
+Text editor Sublime text
